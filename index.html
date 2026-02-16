@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>CareConnect - Reliable Care for Your Loved Ones</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet" />
+
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2b9dee",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101a22",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+      min-height: max(884px, 100dvh);
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111518] dark:text-white">
+  <!-- Navigation Bar -->
+  <header
+    class="sticky top-0 z-50 flex items-center bg-white/90 dark:bg-background-dark/90 backdrop-blur-md px-4 py-3 justify-between border-b border-primary/10">
+    <div class="flex items-center gap-2">
+      <div class="text-primary flex size-10 items-center justify-center rounded-lg bg-primary/10">
+        <span class="material-symbols-outlined text-2xl"><svg fill="currentColor" height="1.5em" stroke="currentColor"
+            stroke-width="0" viewbox="0 0 512 512" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M256 0c4.6 0 9.2 1 13.4 2.9L452.8 80.1c15.5 6.7 25.2 22.1 25.2 39V288c0 128-156.2 210.1-211.3 222c-7.1 1.5-14.4 1.5-21.4 0C189.9 498.1 34 416 34 288V119.1c0-16.9 9.7-32.3 25.2-39L242.6 2.9C246.8 1 251.4 0 256 0zm0 128c-35.3 0-64 28.7-64 64 0 23.6 12.8 44.1 32 55.1V288c0 17.7 14.3 32 32 32s32-14.3 32-32v-40.9c19.2-11 32-31.5 32-55.1 0-35.3-28.7-64-64-64z">
+            </path>
+          </svg></span>
+      </div>
+      <h2 class="text-[#111518] dark:text-white text-xl font-bold leading-tight tracking-tight">CareConnect</h2>
+    </div>
+    <div class="flex items-center gap-4">
+      <button class="hidden md:flex text-sm font-semibold text-primary hover:text-primary/80 transition-colors">Sign
+        In</button>
+      <button class="flex size-10 items-center justify-center rounded-lg hover:bg-primary/10 transition-colors">
+        <svg fill="currentColor" height="1.5em" stroke="currentColor" stroke-width="0" viewbox="0 0 24 24" width="1.5em"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="@container">
+      <div class="@[480px]:px-4 @[480px]:py-6">
+        <div
+          class="relative flex flex-col justify-center items-start overflow-hidden bg-white dark:bg-slate-900 @[480px]:rounded-xl min-h-[500px] px-6 py-12">
+          <div class="absolute inset-0 z-0">
+            <img alt="Professional caregiver smiling with an elderly woman in a bright room"
+              class="w-full h-full object-cover brightness-[0.6] dark:brightness-[0.4]"
+              data-alt="Professional caregiver smiling with an elderly woman in a bright room"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDITb1BvDeJ6beo7SM7a2usRmuWQLD_SCNdwU1GpsA7fDuVdvzwI3G5ZLwcVg8xi0i53Kvamt-fMhrmU7Lzt5VNDl--ed94Ndlt6j6XSrL3nVFwLeYYQIduhB9OpvRZHzUts_VMaQho1mKoc03nxAcVF96ajhjHfH_pw28F5z6azNKze69RZLeG5N4qRFMPXGJyt3OFSbMQYLoyFuHptjdgQ3J2V3u8VjF-2YeQxzXENPVGCnnUamrsPT3Ax6r44oTmT9cb73fC1g" />
+          </div>
+          <div class="relative z-10 max-w-2xl space-y-6">
+            <h1 class="text-white text-4xl md:text-6xl font-extrabold leading-tight tracking-tight">
+              Reliable Care for Your Loved Ones
+            </h1>
+            <p class="text-white/90 text-lg md:text-xl font-medium leading-relaxed max-w-lg">
+              Trusted caregiving for children, elderly, and special needs. We bring professional support to your
+              doorstep.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-4">
+              <button
+                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-primary text-white text-lg font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                Book Now
+              </button>
+              <button
+                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-14 px-8 bg-white/10 backdrop-blur-md text-white text-lg font-bold border border-white/20 hover:bg-white/20 transition-all">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mission Section -->
+    <section class="py-16 px-4 bg-white dark:bg-background-dark/50">
+      <div class="max-w-4xl mx-auto text-center space-y-6">
+        <span
+          class="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-bold uppercase tracking-wider">Our
+          Mission</span>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-[#111518] dark:text-white">Empowering Families
+          Through Quality Care</h2>
+        <p class="text-lg text-[#617989] dark:text-slate-400 leading-relaxed">
+          At CareConnect, we believe everyone deserves dignity and dedicated support. Our mission is to make
+          professional caregiving easy, secure, and accessible for everyone, ensuring your family members are in safe,
+          compassionate hands.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
+          <div class="flex flex-col items-center gap-2">
+            <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C381.5 463.7 496 326.5 496 128c0-19.4-11.7-36.9-30-44.3zM256 464c-89.8-38.3-186-154-186-336L256 52.8 442 128c0 182-96.2 297.7-186 336z">
+              </path>
+            </svg>
+            <h4 class="font-bold text-[#111518] dark:text-white">Secure</h4>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M256 48c114.953 0 208 93.047 208 208S370.953 464 256 464 48 370.953 48 256 141.047 48 256 48zm0 40c-92.781 0-168 75.219-168 168s75.219 168 168 168 168-75.219 168-168-75.219-168-168-168zm0 56c19.882 0 36 16.118 36 36s-16.118 36-36 36-36-16.118-36-36 16.118-36 36-36zm106.332 79.434c11.046 0 20 8.954 20 20 0 11.046-8.954 20-20 20h-50.457l12.422 66.863c1.789 9.635-4.508 18.914-14.055 20.727-9.547 1.812-18.73-4.566-20.519-14.201L274.672 320h-37.344l-15.051 76.823c-1.875 9.57-11.121 15.821-20.648 13.945-9.528-1.876-15.742-11.196-13.868-20.767l13.153-67.078h-44.582c-11.046 0-20-8.954-20-20s8.954-20 20-20h60.312l9.043-46.121c-29.289-5.18-51.312-30.738-51.312-61.41 0-34.516 27.984-62.5 62.5-62.5s62.5 27.984 62.5 62.5c0 30.672-22.023 56.23-51.312 61.41l9.043 46.121h69.41z">
+              </path>
+            </svg>
+            <h4 class="font-bold text-[#111518] dark:text-white">Accessible</h4>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z">
+              </path>
+            </svg>
+            <h4 class="font-bold text-[#111518] dark:text-white">Compassionate</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-16 px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex justify-between items-end mb-10">
+          <div class="space-y-2">
+            <h2 class="text-3xl font-bold tracking-tight">Our Services</h2>
+            <p class="text-[#617989] dark:text-slate-400">Specialized care for every stage of life.</p>
+          </div>
+          <a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+            View All <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 320 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+              </path>
+            </svg>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Baby Care -->
+          <div
+            class="group p-8 rounded-xl bg-white dark:bg-slate-800 border border-primary/5 hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
+            <div
+              class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M256 16C123.45 16 16 123.45 16 256s107.45 240 240 240 240-107.45 240-240S388.55 16 256 16zm0 432c-105.87 0-192-86.13-192-192s86.13-192 192-192 192 86.13 192 192-86.13 192-192 192zm-80-240c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm160 0c-17.67 0-32 14.33-32 32s14.33 32 32 32 32-14.33 32-32-14.33-32-32-32zm-128 96c0 26.51 21.49 48 48 48s48-21.49 48-48"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-[#111518] dark:text-white">Baby Care</h3>
+            <p class="text-[#617989] dark:text-slate-400 leading-relaxed mb-6">Expert care for your little ones, from
+              newborns to toddlers. Professional nannies you can trust.</p>
+            <button class="text-primary font-bold flex items-center gap-2 group/btn">
+              Learn More <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                viewbox="0 0 320 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <!-- Elderly Service -->
+          <div
+            class="group p-8 rounded-xl bg-white dark:bg-slate-800 border border-primary/5 hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
+            <div
+              class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-3.9c-37.6 21.3-80 32-124.1 32s-86.5-10.7-124.1-32H128c-70.7 0-128 57.3-128 128v48c0 17.7 14.3 32 32 32h448c17.7 0 32-14.3 32-32v-48c0-70.7-57.3-128-128-128z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-[#111518] dark:text-white">Elderly Service</h3>
+            <p class="text-[#617989] dark:text-slate-400 leading-relaxed mb-6">Compassionate support for seniors
+              including companionship, mobility assistance, and medication tracking.</p>
+            <button class="text-primary font-bold flex items-center gap-2 group/btn">
+              Learn More <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                viewbox="0 0 320 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <!-- Sick People Service -->
+          <div
+            class="group p-8 rounded-xl bg-white dark:bg-slate-800 border border-primary/5 hover:border-primary/30 transition-all shadow-sm hover:shadow-xl">
+            <div
+              class="size-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+              <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M464 128h-80V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zM176 80h160v48H176V80zM328 328h-48v48c0 4.418-3.582 8-8 8h-32c-4.418 0-8-3.582-8-8v-48h-48c-4.418 0-8-3.582-8-8v-32c0-4.418 3.582-8 8-8h48v-48c0-4.418 3.582-8 8-8h32c4.418 0 8 3.582 8 8v48h48c4.418 0 8 3.582 8 8v32c0 4.418-3.582 8-8 8z">
+                </path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-[#111518] dark:text-white">Sick Care</h3>
+            <p class="text-[#617989] dark:text-slate-400 leading-relaxed mb-6">Professional home-based medical
+              assistance and recovery support for patients post-surgery or during illness.</p>
+            <button class="text-primary font-bold flex items-center gap-2 group/btn">
+              Learn More <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0"
+                viewbox="0 0 320 512" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                </path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials & Stats -->
+    <section class="py-16 px-4 bg-primary/5 overflow-hidden">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-8">
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight">What Families Say About CareConnect
+            </h2>
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-xl shadow-lg relative">
+              <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M464 256h-80v-48c0-26.51 21.49-48 48-48h32V80h-32c-70.69 0-128 57.31-128 128v192c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V288c0-17.67-14.33-32-32-32zm-256 0h-80v-48c0-26.51 21.49-48 48-48h32V80h-32C105.31 80 48 137.31 48 208v192c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V288c0-17.67-14.33-32-32-32z">
+                </path>
+              </svg>
+              <div class="flex gap-1 text-orange-400 mb-4">
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
+                  </path>
+                </svg>
+              </div>
+              <p class="text-lg italic text-[#111518] dark:text-white leading-relaxed mb-6">
+                "The caregiver we found for my mother was exceptional. She wasn't just a helper; she became part of our
+                family. CareConnect made the whole process seamless."
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="size-12 rounded-full overflow-hidden bg-slate-200">
+                  <img alt="Profile of Sarah Jenkins" data-alt="Close up portrait of a happy female customer"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgIswV-FPh7yudEvK2eikaF_beAQn30KGnjTsKoZJMwyGm8pBkWWW85yeZTiIfl9qxc9bMuIfcJ4y6NobcLprR9PGgVksl8Z9wPLTIAD4hv1oOCDeH7VBRoWUrkDyRdIAUFYiumJM1XtzlIEQW4F5GCWBB5iRv2qcNvIAOvHfNGy0UVEoJAc84fEkZld7u5mDOKF3WCc1gkr_-_1WH4av0r1zXDdcBPzfpk5oh2K2RQGRaFcN-KN8is1QEG0k9k6s1R475NaK9Lg" />
+                </div>
+                <div>
+                  <h5 class="font-bold text-[#111518] dark:text-white">Sarah Jenkins</h5>
+                  <p class="text-sm text-[#617989] dark:text-slate-400">Daughter of client</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-4">
+              <button
+                class="size-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 320 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                  </path>
+                </svg>
+              </button>
+              <button
+                class="size-10 rounded-full border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-colors">
+                <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 320 512"
+                  width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div
+              class="bg-primary p-8 rounded-xl text-white flex flex-col justify-center items-center text-center space-y-2">
+              <span class="text-4xl font-extrabold tracking-tighter">5000+</span>
+              <p class="font-bold text-primary/20 uppercase text-xs tracking-widest">Families Served</p>
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-primary/10 flex flex-col justify-center items-center text-center space-y-2">
+              <span class="text-4xl font-extrabold tracking-tighter text-primary">4.9/5</span>
+              <p class="font-bold text-[#617989] dark:text-slate-400 uppercase text-xs tracking-widest">Average Rating
+              </p>
+            </div>
+            <div
+              class="bg-white dark:bg-slate-800 p-8 rounded-xl border border-primary/10 flex flex-col justify-center items-center text-center space-y-2">
+              <span class="text-4xl font-extrabold tracking-tighter text-primary">1200+</span>
+              <p class="font-bold text-[#617989] dark:text-slate-400 uppercase text-xs tracking-widest">Vetted Carers
+              </p>
+            </div>
+            <div
+              class="bg-slate-900 p-8 rounded-xl text-white flex flex-col justify-center items-center text-center space-y-2">
+              <span class="text-4xl font-extrabold tracking-tighter">24/7</span>
+              <p class="font-bold text-white/40 uppercase text-xs tracking-widest">Care Support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-background-dark border-t border-primary/10 py-16 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="space-y-6">
+        <div class="flex items-center gap-2">
+          <div class="text-primary flex size-8 items-center justify-center rounded-lg bg-primary/10">
+            <svg fill="currentColor" height="1.2em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+              width="1.2em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M256 0c4.6 0 9.2 1 13.4 2.9L452.8 80.1c15.5 6.7 25.2 22.1 25.2 39V288c0 128-156.2 210.1-211.3 222c-7.1 1.5-14.4 1.5-21.4 0C189.9 498.1 34 416 34 288V119.1c0-16.9 9.7-32.3 25.2-39L242.6 2.9C246.8 1 251.4 0 256 0zm0 128c-35.3 0-64 28.7-64 64 0 23.6 12.8 44.1 32 55.1V288c0 17.7 14.3 32 32 32s32-14.3 32-32v-40.9c19.2-11 32-31.5 32-55.1 0-35.3-28.7-64-64-64z">
+              </path>
+            </svg>
+          </div>
+          <h2 class="text-[#111518] dark:text-white text-lg font-bold">CareConnect</h2>
+        </div>
+        <p class="text-sm text-[#617989] dark:text-slate-400 leading-relaxed">
+          Reliable, compassionate, and professional caregiving services for your loved ones at home.
+        </p>
+        <div class="flex gap-4">
+          <a class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            href="#">
+            <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 496 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm31.7 192c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zM0 256c0 121.3 90.5 221.4 208 238.2V352h-71.1c-10.7 0-19.4-8.7-19.4-19.4v-4.5c0-10.7 8.7-19.4 19.4-19.4H208v-105.3h-71.1c-10.7 0-19.4-8.7-19.4-19.4v-4.5c0-10.7 8.7-19.4 19.4-19.4H208V23.8C90.5 40.6 0 140.7 0 256zm496 0c0-115.3-90.5-215.4-208-232.2V128h71.1c10.7 0 19.4 8.7 19.4 19.4v4.5c0 10.7-8.7 19.4-19.4 19.4H288v105.3h71.1c10.7 0 19.4 8.7 19.4 19.4v4.5c0 10.7-8.7 19.4-19.4 19.4H288v131.8c117.5-16.8 208-116.9 208-238.2z">
+              </path>
+            </svg>
+          </a>
+          <a class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            href="#">
+            <svg fill="currentColor" height="1em" stroke="currentColor" stroke-width="0" viewbox="0 0 512 512"
+              width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M256 32C132.3 32 32 132.3 32 256s100.3 224 224 224 224-100.3 224-224c0-56.1-20.2-106.4-54-145.3-5.5-6.3-15.1-7-21.4-1.5s-7 15.1-1.5 21.4C403.2 165.1 416 209 416 256c0 88.4-71.6 160-160 160s-160-71.6-160-160 71.6-160 160-160c44.1 0 84.1 17.9 113.1 46.9 4.2 4.2 11 4.2 15.2 0 4.2-4.2 4.2-11 0-15.2-33-33-78.6-53.7-128.3-53.7z">
+              </path>
+            </svg>
+          </a>
+          <a class="size-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            href="#">
+            <svg fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+              <polyline points="16 6 12 2 8 6"></polyline>
+              <line x1="12" x2="12" y1="2" y2="15"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Quick Links</h4>
+        <ul class="space-y-4 text-sm text-[#617989] dark:text-slate-400">
+          <li><a class="hover:text-primary transition-colors" href="#">Find a Caregiver</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">How it Works</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Pricing Plans</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Safety Protocols</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Become a Caregiver</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Services</h4>
+        <ul class="space-y-4 text-sm text-[#617989] dark:text-slate-400">
+          <li><a class="hover:text-primary transition-colors" href="#">Newborn Care</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Senior Companionship</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Post-Op Recovery</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Dementia Support</a></li>
+          <li><a class="hover:text-primary transition-colors" href="#">Special Needs Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-bold mb-6">Contact Us</h4>
+        <ul class="space-y-4 text-sm text-[#617989] dark:text-slate-400">
+          <li class="flex items-start gap-3">
+            <svg fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span>123 Care Street, Medical District,<br />Health City, HC 54321</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+              </path>
+            </svg>
+            <span>+1 (800) CARE-NOW</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <svg fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="2" viewbox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>hello@careconnect.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="max-w-6xl mx-auto border-t border-primary/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#617989] dark:text-slate-500">
+      <p>© 2024 CareConnect. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+        <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+        <a class="hover:text-primary transition-colors" href="#">Cookie Policy</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Bottom Navigation (Mobile Only) -->
+  <div
+    class="fixed bottom-0 left-0 right-0 md:hidden bg-white/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-primary/10 flex items-center justify-around py-3 px-4 z-50">
+    <a class="flex flex-col items-center gap-1 text-primary" href="#">
+      <svg fill="currentColor" height="1.5em" stroke="currentColor" stroke-width="0" viewbox="0 0 576 512" width="1.5em"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 26a32 32 0 0 0-44.94 0L4.4 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.2 301l235.2-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z">
+        </path>
+      </svg>
+      <span class="text-[10px] font-bold">Home</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 text-[#617989]" href="#">
+      <svg fill="none" height="1.5em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" viewbox="0 0 24 24" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z">
+        </path>
+      </svg>
+      <span class="text-[10px] font-bold">Services</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 text-[#617989]" href="#">
+      <svg fill="none" height="1.5em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" viewbox="0 0 24 24" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+        <rect height="18" rx="2" ry="2" width="18" x="3" y="4"></rect>
+        <line x1="16" x2="16" y1="2" y2="6"></line>
+        <line x1="8" x2="8" y1="2" y2="6"></line>
+        <line x1="3" x2="21" y1="10" y2="10"></line>
+      </svg>
+      <span class="text-[10px] font-bold">Bookings</span>
+    </a>
+    <a class="flex flex-col items-center gap-1 text-[#617989]" href="#">
+      <svg fill="none" height="1.5em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+        stroke-width="2" viewbox="0 0 24 24" width="1.5em" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+        <circle cx="12" cy="7" r="4"></circle>
+      </svg>
+      <span class="text-[10px] font-bold">Profile</span>
+    </a>
+  </div>
+</body>
+
+</html>
