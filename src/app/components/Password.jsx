@@ -7,7 +7,6 @@ const Password = () => {
   function Visibility() {
     setVisibility(!visibility);
   }
-  console.log(visibility);
 
   return (
     <div className="flex flex-col gap-2">

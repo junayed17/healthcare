@@ -2,9 +2,9 @@ import React from 'react';
 
 const page = () => {
   return (
-    <div>
+    <section className='min-h-[100vh]'>
       iam booked Services
-    </div>
+    </section>
   );
 };
 
