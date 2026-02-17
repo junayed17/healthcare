@@ -135,7 +135,7 @@ const Testimonials = () => {
           <span className="text-4xl font-extrabold tracking-tighter">
             5000+
           </span>
-          <p className="font-bold text-primary/20 uppercase text-xs tracking-widest">
+          <p className="font-bold  uppercase text-xs tracking-widest">
             Families Served
           </p>
         </div>
