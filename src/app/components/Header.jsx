@@ -56,17 +56,17 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Logo/>
+          <Logo />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 gap-x-2">
-            <li className="text-xl font-bold">
+            <li className="text-lg font-bold">
               <Navigationbtns href="/" text="Home" />
             </li>
-            <li className="text-xl font-bold">
+            <li className="text-lg font-bold">
               <Navigationbtns href="/services" text="Services" />
             </li>
-            <li className="text-xl font-bold">
+            <li className="text-lg font-bold">
               <Navigationbtns href="/bookedServices" text="Booked" />
             </li>
           </ul>
